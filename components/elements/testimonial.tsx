@@ -13,13 +13,7 @@ type TestimonialProps = {
   setHeight: Function
 }
 
-export const Testimonial = ({
-  index,
-  headline,
-  body,
-  transitionDirection,
-  setHeight,
-}) => {
+export const Testimonial = ({index, headline, body, transitionDirection, setHeight}) => {
   const ref = useRef(null)
   const variants = {
     enter: (transitionDirection: number) => {
@@ -28,9 +22,9 @@ export const Testimonial = ({
     selected: {x: 0},
     exit: (transitionDirection: number) => {
       return {
-        x: `${transitionDirection * -100}%`,
+        x: `${transitionDirection * -100}%`
       }
-    },
+    }
   }
 
   useEffect(() => {
@@ -49,10 +43,7 @@ export const Testimonial = ({
       exit="exit"
     >
       <div className="space-y-4 sm:flex sm:justify-between sm:space-y-0">
-        <ParagraphHeading
-          text={`"${headline}"`}
-          className="border-orange-300"
-        />
+        <ParagraphHeading text={`"${headline}"`} className="border-orange-300" />
         <Stars />
       </div>
       <Paragraph>{body}</Paragraph>
