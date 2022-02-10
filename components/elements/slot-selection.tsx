@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 import {getMonthName} from '@lib/helpers/get-month-name'
 import {formatTime} from '@lib/helpers/format-time'
