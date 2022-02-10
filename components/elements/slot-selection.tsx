@@ -61,7 +61,7 @@ export const SlotSelection = ({slots, year, month, date, dateDirection, loading,
                 <button
                   type="button"
                   onClick={() => setSlot(id)}
-                  className={`flex h-8 items-center rounded-full px-2 font-bold lg:h-7 lg:text-sm 2xl:h-8 2xl:text-base ${
+                  className={`flex h-8 items-center rounded-full px-3 font-bold lg:h-7 lg:text-sm 2xl:h-8 2xl:text-base ${
                     slot == id ? 'bg-indigo-500 text-slate-100' : 'bg-indigo-200/80 text-indigo-900 hover:bg-indigo-200'
                   }`}
                 >
