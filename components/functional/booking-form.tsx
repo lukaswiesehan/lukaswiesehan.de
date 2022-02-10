@@ -110,9 +110,13 @@ export const BookingForm = () => {
               custom={pageDirection}
             >
               <div>asdf</div>
-              <div className="flex items-center justify-end space-x-8 px-4">
-                <Button type="secondary" text="Termin ändern" action={() => setPage([1, -1])} hideArrow />
-                <Button type="primary" text="Termin bestätigen" action={() => setPage([3, 1])} disabled={!slot} />
+              <div className="space-y-4 px-4 md:flex md:flex-row-reverse md:items-center md:space-y-0">
+                <div className="md:ml-8">
+                  <Button type="primary" text="Termin bestätigen" action={() => setPage([3, 1])} disabled={!slot} />
+                </div>
+                <div>
+                  <Button type="secondary" text="Termin ändern" action={() => setPage([1, -1])} hideArrow />
+                </div>
               </div>
             </motion.div>
           )}
