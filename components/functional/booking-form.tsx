@@ -44,7 +44,6 @@ export const BookingForm = () => {
   }
 
   useEffect(() => {
-    console.log(data)
     setHeight(pages[`${page}`].current.clientHeight)
     window.scrollTo({top: 0, behavior: 'smooth'})
   }, [page])
