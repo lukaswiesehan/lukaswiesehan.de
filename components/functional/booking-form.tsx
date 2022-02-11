@@ -64,6 +64,15 @@ export const BookingForm = () => {
     e.preventDefault()
     try {
       setLoadingSubmit(true)
+      const response = await fetch('/api/form/submit', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          slot: data.slots.filter((s) => s.id == slot)[0],
+          details
+        })
+      })
+      setLoadingSubmit(false)
     } catch (error) {
       console.log(error)
     }

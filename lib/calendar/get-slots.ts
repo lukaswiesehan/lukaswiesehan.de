@@ -1,14 +1,9 @@
-import {JWT} from 'google-auth-library'
+import {useClient} from '@lib/calendar/use-client'
 
 import {Slot} from '@lib/types/slot'
 
 export const getSlots = async (): Promise<Slot[]> => {
-  const client = new JWT({
-    email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    key: process.env.GOOGLE_SERVICE_ACCOUNT_KEY.replace(/\\n/g, '\n'),
-    scopes: ['https://www.googleapis.com/auth/calendar']
-  })
-
+  const client = useClient()
   const endpoint = 'https://www.googleapis.com/calendar/v3/calendars/mail@lukaswiesehan.de/events'
 
   let tomorrow = new Date()

@@ -14,8 +14,8 @@ type BookingDataProps = {
 export const BookingData = ({data, setData}: BookingDataProps) => {
   return (
     <div className="grid grid-cols-1 gap-x-4 gap-y-6 px-4 md:grid-cols-2">
-      <Input id="firstName" label="Dein Vorame" placeholder="John" type="text" data={data} setData={setData} autocomplete="name" required />
-      <Input id="lastName" label="Dein Nachname" placeholder="Doe" type="text" data={data} setData={setData} autocomplete="name" required />
+      <Input id="firstName" label="Dein Vorame" placeholder="John" type="text" data={data} setData={setData} autocomplete="given-name" required />
+      <Input id="lastName" label="Dein Nachname" placeholder="Doe" type="text" data={data} setData={setData} autocomplete="family-name" required />
       <Input
         id="email"
         label="Deine Email-Adresse"
