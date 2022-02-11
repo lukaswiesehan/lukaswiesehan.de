@@ -15,7 +15,7 @@ export const Slots = async (req, res) => {
       meeting = await createMeeting({slot, details})
     }
 
-    //const eventUpdated = await updateEvent({event, details, meeting})
+    const eventUpdated = await updateEvent({event, details, meeting})
 
     const confirmationSent = await sendBookingConfirmation({slot, details, meeting})
 
