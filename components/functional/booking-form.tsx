@@ -11,6 +11,7 @@ import {Paragraph} from '@components/typography/paragraph'
 import {Calendar} from '@components/elements/calendar'
 import {SlotSelection} from '@components/elements/slot-selection'
 import {Button} from '@components/elements/button'
+import {BookingData} from '@components/elements/booking-data'
 
 import {Slot} from '@lib/types/slot'
 
@@ -28,6 +29,7 @@ export const BookingForm = () => {
   const [slot, setSlot] = useState('')
   const [height, setHeight] = useState(0)
   const [[page, pageDirection], setPage] = useState([1, 1])
+  const [details, setDetails] = useState({name: '', email: ''})
 
   const {data, error} = useSWR<{slots: Slot[]}>('/api/calendar/slots', fetcher)
 
@@ -42,6 +44,7 @@ export const BookingForm = () => {
   }
 
   useEffect(() => {
+    console.log(data)
     setHeight(pages[`${page}`].current.clientHeight)
     window.scrollTo({top: 0, behavior: 'smooth'})
   }, [page])
@@ -102,14 +105,22 @@ export const BookingForm = () => {
             <motion.div
               key={2}
               ref={pages['2']}
-              className="absolute w-full"
+              className="absolute w-full space-y-8"
               initial="enter"
               animate="selected"
               exit="exit"
               variants={pageVariants}
               custom={pageDirection}
             >
-              <div>asdf</div>
+              <div>
+                <Icon src="/icons/indigo-clipboard-text-icon.svg" className="shadow-indigo-100" />
+                <ParagraphHeading text="Details zum Gespräch" className="border-indigo-300" />
+                <Paragraph>
+                  Um bereits aus dem ersten Gespräch möglichst viel mitzunehmen, gib mir ein paar kurze Infos. So kann ich mich vorbereiten und Du
+                  verschwendest keine Zeit.
+                </Paragraph>
+              </div>
+              <BookingData data={details} setData={setDetails} />
               <div className="space-y-4 px-4 md:flex md:flex-row-reverse md:items-center md:space-y-0">
                 <div className="md:ml-8">
                   <Button type="primary" text="Termin bestätigen" action={() => setPage([3, 1])} disabled={!slot} />
