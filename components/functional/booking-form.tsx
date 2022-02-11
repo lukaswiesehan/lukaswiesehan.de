@@ -35,7 +35,7 @@ export const BookingForm = () => {
   const [height, setHeight] = useState(0)
   const [[page, pageDirection], setPage] = useState([1, 1])
 
-  const initialData = {name: '', email: '', setting: 'zoom', phone: '', industry: '', message: ''}
+  const initialData = {firstName: '', lastName: '', email: '', setting: 'zoom', phone: '', industry: '', message: '', privacy: false}
   const [details, setDetails] = useState(initialData)
   const [loadingSubmit, setLoadingSubmit] = useState(false)
 
@@ -53,8 +53,12 @@ export const BookingForm = () => {
 
   useEffect(() => {
     setHeight(pages[`${page}`].current.clientHeight)
-    window.scrollTo({top: 0, behavior: 'smooth'})
+    if (!breakpoint.lg) window.scrollTo({top: 0})
   }, [page])
+
+  useEffect(() => {
+    setHeight(pages[`${page}`].current.clientHeight)
+  }, [details.setting])
 
   const submitForm = async (e) => {
     e.preventDefault()
