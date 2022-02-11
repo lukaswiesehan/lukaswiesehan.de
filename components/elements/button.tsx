@@ -1,15 +1,17 @@
 import {motion} from 'framer-motion'
+import {Loader} from '@components/elements/loader'
 
 type ButtonProps = {
   type: 'primary' | 'secondary'
   text: string
-  action: (e) => void
+  submit?: boolean | false
+  action?: (e) => void
   loading?: boolean | false
   disabled?: boolean | false
   hideArrow?: boolean | false
 }
 
-export const Button = ({type, text, action, loading, disabled, hideArrow}: ButtonProps) => {
+export const Button = ({type, submit, text, action, loading, disabled, hideArrow}: ButtonProps) => {
   const transitionDuration = 0.15
 
   const lineVariants = {
@@ -28,6 +30,7 @@ export const Button = ({type, text, action, loading, disabled, hideArrow}: Butto
           ? `px-5 ${!hideArrow && 'pr-4'} text-slate-50  ${disabled ? 'bg-slate-900/70' : 'bg-slate-900 hover:bg-slate-900/80'}`
           : 'bg-transparent text-slate-900 hover:text-slate-900/70'
       }`}
+      type={submit ? 'submit' : 'button'}
       initial="rest"
       whileHover="hover"
       animate="rest"
@@ -36,7 +39,9 @@ export const Button = ({type, text, action, loading, disabled, hideArrow}: Butto
       disabled={loading || disabled}
     >
       {loading ? (
-        <span></span>
+        <span className="flex h-full items-center justify-center pr-1">
+          <Loader className="text-slate-50" />
+        </span>
       ) : (
         <span className="flex items-center space-x-2">
           <span>{text}</span>

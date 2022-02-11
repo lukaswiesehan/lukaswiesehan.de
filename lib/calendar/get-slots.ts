@@ -49,7 +49,5 @@ export const getSlots = async (): Promise<Slot[]> => {
       }
     })
 
-  console.log(slots)
-
   return slots
 }

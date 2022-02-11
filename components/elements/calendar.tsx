@@ -52,6 +52,7 @@ export const Calendar = ({slots, loading, year, setYear, month, monthDirection, 
 
   const selectDate = (day) => {
     setDate([day, day > date ? 1 : -1])
+    setSlot('')
   }
 
   if (loading) {
@@ -76,7 +77,7 @@ export const Calendar = ({slots, loading, year, setYear, month, monthDirection, 
                 variants={monthVariants}
                 custom={monthDirection}
               >
-                {`${getMonthName(year, month)} ${year}`}
+                {`${getMonthName(month)} ${year}`}
               </motion.p>
             </AnimatePresence>
           </div>
@@ -117,7 +118,7 @@ export const Calendar = ({slots, loading, year, setYear, month, monthDirection, 
                 <button
                   key={index}
                   type="button"
-                  aria-label={`${index + 1}. ${getMonthName(year, month)}`}
+                  aria-label={`${index + 1}. ${getMonthName(month)}`}
                   className={`flex h-8 w-8 items-center justify-center rounded-full lg:h-7 lg:w-7 2xl:h-8 2xl:w-8 ${
                     currentDate == index + 1 && month == currentMonth && year == currentYear && 'font-black text-slate-900'
                   } ${

@@ -16,9 +16,10 @@ type SlotSelectionProps = {
   loading: boolean
   slot: string
   setSlot: Dispatch<SetStateAction<{}>>
+  setTime: Dispatch<SetStateAction<{}>>
 }
 
-export const SlotSelection = ({slots, year, month, date, dateDirection, loading, slot, setSlot}: SlotSelectionProps) => {
+export const SlotSelection = ({slots, year, month, date, dateDirection, loading, slot, setSlot, setTime}: SlotSelectionProps) => {
   const elementVariants = {
     enter: (direction: number) => {
       return {x: `${direction * 101}%`}
@@ -27,6 +28,11 @@ export const SlotSelection = ({slots, year, month, date, dateDirection, loading,
     exit: (direction: number) => {
       return {x: `${direction * -101}%`}
     }
+  }
+
+  const selectSlot = (id, start, end) => {
+    setSlot(id)
+    setTime(`${formatTime(start.hours, start.minutes)} – ${formatTime(end.hours, end.minutes)}`)
   }
 
   if (loading) {
@@ -50,7 +56,7 @@ export const SlotSelection = ({slots, year, month, date, dateDirection, loading,
               variants={elementVariants}
               custom={dateDirection}
             >
-              {date == -1 ? 'Kein Datum ausgewählt' : `${date}. ${getMonthName(year, month)} ${year}`}
+              {date == -1 ? 'Kein Datum ausgewählt' : `${date}. ${getMonthName(month)} ${year}`}
             </motion.p>
           </AnimatePresence>
         </div>
@@ -60,7 +66,7 @@ export const SlotSelection = ({slots, year, month, date, dateDirection, loading,
               <motion.li key={date * 100 + index} initial="enter" animate="selected" exit="exit" variants={elementVariants} custom={dateDirection}>
                 <button
                   type="button"
-                  onClick={() => setSlot(id)}
+                  onClick={() => selectSlot(id, start, end)}
                   className={`flex h-8 items-center rounded-full px-3 font-bold lg:h-7 lg:text-sm 2xl:h-8 2xl:text-base ${
                     slot == id ? 'bg-indigo-500 text-slate-100' : 'bg-indigo-200/80 text-indigo-900 hover:bg-indigo-200'
                   }`}
