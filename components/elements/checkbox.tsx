@@ -2,7 +2,6 @@ import {Dispatch, SetStateAction, ReactNode} from 'react'
 
 type CheckboxProps = {
   id: string
-  label: string
   required?: boolean | false
   data: any
   setData: Dispatch<SetStateAction<{}>>

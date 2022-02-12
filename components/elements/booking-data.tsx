@@ -52,15 +52,22 @@ export const BookingData = ({data, setData}: BookingDataProps) => {
       <Input
         id="industry"
         label="In welcher Branche bist Du tätig?"
-        placeholder="John Doe"
+        placeholder="Branche"
         type="text"
         data={data}
         setData={setData}
         required
         className="md:col-span-2"
       />
-      <Textarea id="message" label="Details zu Deinem Produkt" placeholder="John Doe" data={data} setData={setData} className="md:col-span-2" />
-      <Checkbox id="privacy" label="TEst" data={data} setData={setData} required className="md:col-span-2">
+      <Textarea
+        id="message"
+        label="Details zu Deinem Produkt"
+        placeholder="Über Dein Produkt und Dein Unternehmen..."
+        data={data}
+        setData={setData}
+        className="md:col-span-2"
+      />
+      <Checkbox id="privacy" data={data} setData={setData} required className="md:col-span-2">
         Ich habe die{' '}
         <Link href="privacy">
           <a className="underline">Datenschutzerklärung</a>
