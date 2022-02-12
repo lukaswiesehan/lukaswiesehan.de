@@ -15,16 +15,21 @@ import {Button} from '@components/elements/button'
 import {SolidCalendarIcon} from '@components/elements/icons/solid-calendar-icon'
 import {SolidClockIcon} from '@components/elements/icons/solid-clock-icon'
 import {SolidPencilIcon} from '@components/elements/icons/solid-pencil-icon'
+import {SolidUserIcon} from '@components/elements/icons/solid-user-icon'
 import {BookingData} from '@components/elements/booking-data'
 
 import {Slot} from '@lib/types/slot'
+import {ErrorMessage} from '@components/elements/error-message'
+import {SolidInboxIcon} from '@components/elements/icons/solid-inbox-icon'
+import {SolidDevicesIcon} from '@components/elements/icons/solid-devices-icon'
 
 export const BookingForm = () => {
   const breakpoint = useBreakpoint()
 
   const pages = {
     '1': useRef(null),
-    '2': useRef(null)
+    '2': useRef(null),
+    '3': useRef(null)
   }
 
   const [year, setYear] = useState(new Date().getFullYear())
@@ -38,6 +43,7 @@ export const BookingForm = () => {
   const initialData = {firstName: '', lastName: '', email: '', setting: 'zoom', phone: '', industry: '', message: '', privacy: false}
   const [details, setDetails] = useState(initialData)
   const [loadingSubmit, setLoadingSubmit] = useState(false)
+  const [submissionError, setSubmissionError] = useState('')
 
   const {data, error} = useSWR<{slots: Slot[]}>('/api/calendar/slots', fetcher)
 
@@ -58,7 +64,7 @@ export const BookingForm = () => {
 
   useEffect(() => {
     setHeight(pages[`${page}`].current.clientHeight)
-  }, [details.setting])
+  }, [details.setting, submissionError])
 
   const submitForm = async (e) => {
     e.preventDefault()
@@ -72,6 +78,14 @@ export const BookingForm = () => {
           details
         })
       })
+      const dasdf = await response.json()
+      console.log(dasdf)
+      const {success, error} = dasdf
+      if (success) {
+        setPage([3, 1])
+      } else if (error) {
+        setSubmissionError('Leider ist bei der Buchung etwas schief gelaufen. Versuchs nochmal oder schreib mir eine Email!')
+      }
       setLoadingSubmit(false)
     } catch (error) {
       console.log(error)
@@ -171,7 +185,65 @@ export const BookingForm = () => {
                 <div className="flex px-4 md:justify-end">
                   <Button type="primary" submit text="Termin bestätigen" disabled={!slot} loading={loadingSubmit} />
                 </div>
+                {submissionError && (
+                  <div className="px-4">
+                    <ErrorMessage>{submissionError}</ErrorMessage>
+                  </div>
+                )}
               </form>
+            </motion.div>
+          )}
+          {page == 3 && (
+            <motion.div
+              key={3}
+              ref={pages['3']}
+              className="absolute w-full space-y-8"
+              initial="enter"
+              animate="selected"
+              exit="exit"
+              variants={pageVariants}
+              custom={pageDirection}
+            >
+              <div>
+                <Icon src="/icons/indigo-rocket-icon.svg" className="shadow-indigo-100" />
+                <ParagraphHeading text="Gespräch gebucht!" className="border-indigo-300" />
+                <Paragraph>
+                  Ich bin schon sehr gespannt auf unser Gespräch!
+                  <br />
+                  Du erhältst zur Bestätigung eine Email mit allen Details zum Gespräch.
+                </Paragraph>
+              </div>
+              <div className="space-y-8 px-4">
+                <div className="font-bold text-slate-900">
+                  <div className="flex items-center space-x-2">
+                    <SolidCalendarIcon />
+                    <p>{`${date}. ${getMonthName(month)} ${year}`}</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <SolidClockIcon />
+                    <p>{time}</p>
+                  </div>
+                </div>
+                <div className="font-bold text-slate-900">
+                  <div className="flex items-center space-x-2">
+                    <SolidDevicesIcon />
+                    <p>
+                      {details.setting == 'zoom' && 'Zoom-Meeting'}
+                      {details.setting == 'phone' && 'Telefongespräch'}
+                    </p>
+                  </div>
+                </div>
+                <div className="font-bold text-slate-900">
+                  <div className="flex items-center space-x-2">
+                    <SolidUserIcon />
+                    <p>{`${details.firstName} ${details.lastName}`}</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <SolidInboxIcon />
+                    <p>{details.email}</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

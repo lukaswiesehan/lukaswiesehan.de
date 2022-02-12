@@ -7,8 +7,8 @@ export const getEvent = async (id: string): Promise<any> => {
     scopes: ['https://www.googleapis.com/auth/calendar']
   })
   const endpoint = 'https://www.googleapis.com/calendar/v3/calendars/mail@lukaswiesehan.de/events'
-
   const response = await client.request({url: `${endpoint}/${id}`})
 
+  if(response.status != 200) throw {message: 'Error receiving Google Calendar event data.'}
   return response.data
 }

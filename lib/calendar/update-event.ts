@@ -36,7 +36,6 @@ export const updateEvent = async ({event, details, meeting}) => {
     })
   })
 
-  console.log(response)
-
+  if (response.status != 200) throw {message: 'Error updating Google Calendar entry.'}
   return true
 }
