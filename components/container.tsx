@@ -8,21 +8,20 @@ export const Container = ({children, ...customMeta}) => {
   const router = useRouter()
 
   const meta = {
-    title:
-      'Next-Level Produktwebsite durch Web-Technologien von morgen. | Lukas Wiesehan',
+    title: 'Next-Level Produktwebsite durch Web-Technologien von morgen. | Lukas Wiesehan',
     description:
       'This is a basic Next.js project setup, bootstrapped with create-next-app. It includes tailwindcss and its basic plugins, optimized font loading and more.',
     url: '',
     name: '',
     image: '',
     type: 'website',
-    ...customMeta,
+    ...customMeta
   }
   const jsonLd = {
     '@context': 'http://www.schema.org',
     '@type': 'WebSite',
     name: meta.name,
-    url: meta.url,
+    url: meta.url
   }
 
   return (
@@ -43,15 +42,10 @@ export const Container = ({children, ...customMeta}) => {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         <link rel="icon" href="/favicon.ico" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}} />
       </Head>
-      <div className="min-h-screen">
-        <Navigation />
-        <main className="pt-16 md:pt-20">{children}</main>
-      </div>
+      <Navigation />
+      <main className="pt-16 md:pt-20">{children}</main>
       <Footer />
     </div>
   )

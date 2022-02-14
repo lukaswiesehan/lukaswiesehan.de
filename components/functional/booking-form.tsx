@@ -70,7 +70,7 @@ export const BookingForm = () => {
     e.preventDefault()
     try {
       setLoadingSubmit(true)
-      const response = await fetch('/api/form/submit', {
+      const response = await fetch('/api/contact/submit', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -78,17 +78,14 @@ export const BookingForm = () => {
           details
         })
       })
-      const dasdf = await response.json()
-      console.log(dasdf)
-      const {success, error} = dasdf
-      if (success) {
-        setPage([3, 1])
-      } else if (error) {
-        setSubmissionError('Leider ist bei der Buchung etwas schief gelaufen. Versuchs nochmal oder schreib mir eine Email!')
-      }
-      setLoadingSubmit(false)
+      const {error} = await response.json()
+      if (error) throw error
+      setPage([3, 1])
     } catch (error) {
       console.log(error)
+      setSubmissionError('Leider ist bei der Buchung etwas schief gelaufen. Versuchs nochmal oder schreib mir eine Email!')
+    } finally {
+      setLoadingSubmit(false)
     }
   }
 

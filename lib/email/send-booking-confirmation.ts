@@ -1,5 +1,6 @@
 import {createICS} from '@lib/calendar/create-ics'
 import {getMonthName} from '@lib/helpers/get-month-name'
+import {formatTime} from '@lib/helpers/format-time'
 
 export const sendBookingConfirmation = async ({slot, details, meeting}) => {
   const {error, event} = createICS({slot, details, meeting})
@@ -26,15 +27,17 @@ export const sendBookingConfirmation = async ({slot, details, meeting}) => {
           dynamic_template_data: {
             firstName: details.firstName,
             date: `${slot.start.day}. ${getMonthName(slot.start.month)} ${slot.start.year}`,
-            time: `${slot.start.hours}:${slot.start.minutes} - ${slot.end.hours}:${slot.end.minutes}`,
+            time: `${formatTime(slot.start.hours, slot.start.minutes)} – ${formatTime(slot.end.hours, slot.end.minutes)}`,
             setting: `${details.setting == 'zoom' ? 'Zoom-Meeting' : ''}${details.setting == 'phone' ? 'Telefongespräch' : ''}`,
-            phone: details.phone || null,
-            meetingId: meeting.id || null,
-            password: meeting.password || null,
-            meetingLink: meeting.join_url || null,
+            phone: details?.phone || null,
+            meetingId: meeting?.id || null,
+            password: meeting?.password || null,
+            meetingLink: meeting?.join_url || null,
             industry: details.industry,
             message: details.message,
-            cancelLink: `https://lukaswiesehan.de/contact/cancel-meeting?id=${slot.id}&firstName=${details.firstName}&email=${details.email}`
+            cancelLink: `https://lukaswiesehan.de/contact/cancel-meeting?id=${slot.id}&firstName=${details.firstName}&email=${details.email}${
+              details.setting == 'zoom' ? `&zoomId=${meeting.id}` : ''
+            }`
           }
         }
       ],
