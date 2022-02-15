@@ -24,7 +24,7 @@ export const ContactOptionsSection = () => {
         <Icon src="/icons/indigo-messenger-icon.svg" className="shadow-indigo-100" transitionDelay={breakpoint.md ? 0.1 : 0} />
         <ParagraphHeading text="Facebook" className="border-indigo-300" />
         <Paragraph>
-          Schreib&apos; mir gern auch auf Facebook. Hier bin ich allerdings eher inaktiv – Content gibt&apos;s auf LinkedIn und Instagram.
+          Schreib&apos; mir gern auch auf Facebook. Hier bin ich allerdings eher inaktiv, Content gibt&apos;s auf LinkedIn und Instagram.
         </Paragraph>
         <div className="px-4">
           <Button type="secondary" text="Zu Facebook" action={() => window.open('https://www.facebook.com/lukas.wiesehan/', '_ blank')} loading={false} />
