@@ -19,7 +19,7 @@ export const PrivacyHeadingSection = () => {
           <FadeIn direction="up">
             <HeadingBody className="mt-8 md:max-w-2xl lg:mt-12">
               Mit der folgenden Datenschutzerklärung möchte ich Dich darüber aufklären, welche Arten Deiner personenbezogenen Daten (nachfolgend auch kurz
-              als "Daten“ bezeichnet) ich zu welchen Zwecken und in welchem Umfang verarbeite.
+              als Daten bezeichnet) ich zu welchen Zwecken und in welchem Umfang verarbeite.
             </HeadingBody>
           </FadeIn>
         </div>
