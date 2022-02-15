@@ -16,7 +16,7 @@ import {getFAQs} from '@lib/content/get-faqs'
 
 // Content Types
 import {Testimonial} from '@content/testimonials'
-import {ClientLogo} from '@content/client-logos'
+import {ClientLogo} from '@lib/types/client-logo'
 import {FAQ} from '@content/faqs'
 
 export const getStaticProps = async () => {
@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
   const faqs = getFAQs()
 
   return {
-    props: {testimonials, clientLogos, faqs},
+    props: {testimonials, clientLogos, faqs}
   }
 }
 

@@ -2,16 +2,14 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      'sans': ['Lato', 'sans-serif']
+      sans: ['Lato', 'sans-serif']
     },
-		fontWeight: {
-      'normal': 400,
-      'bold': 700,
-      'black': 900
+    fontWeight: {
+      normal: 400,
+      bold: 700,
+      black: 900
     },
-    extend: {},
+    extend: {}
   },
-  plugins: [
-    require('@tailwindcss/forms')
-  ],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')]
 }
