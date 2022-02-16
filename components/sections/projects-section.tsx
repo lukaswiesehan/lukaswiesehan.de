@@ -24,7 +24,7 @@ export const ProjectsSection = ({projects}) => {
                 <div className="relative mx-4 mb-12 mt-8 h-48 md:mt-0">
                   <Image src={cover} alt={title} placeholder="blur" blurDataURL={cover} layout="fill" objectFit="contain" objectPosition="left" />
                 </div>
-                <ParagraphHeading text={title} className="border-green-300" />
+                <ParagraphHeading text={title} className="border-sky-300" />
                 <p className="mt-2 mb-4 flex items-center space-x-1 px-4 text-sm font-bold md:mb-8">
                   <SolidCalendarIcon />
                   <span>{date}</span>

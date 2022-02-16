@@ -8,12 +8,12 @@ export const Container = ({children, ...customMeta}) => {
   const router = useRouter()
 
   const meta = {
-    title: 'Next-Level Produktwebsite durch Web-Technologien von morgen. | Lukas Wiesehan',
+    title: 'Next-Level Produktwebsite durch Web-Technologien von morgen. - Lukas Wiesehan',
     description:
-      'This is a basic Next.js project setup, bootstrapped with create-next-app. It includes tailwindcss and its basic plugins, optimized font loading and more.',
-    url: '',
-    name: '',
-    image: '',
+      'Ein Online-Erlebnis, das Dein Produkt ins Rampenlicht stellt. Keine Kompromisse zwischen Design und Funktion dank individueller Konzeption und Entwicklung – auch ohne Agenturbudget.',
+    url: 'https://lukaswiesehan.de',
+    name: 'Lukas Wiesehan',
+    image: 'https://lukaswiesehan.de/images/banner.jpg',
     type: 'website',
     ...customMeta
   }
