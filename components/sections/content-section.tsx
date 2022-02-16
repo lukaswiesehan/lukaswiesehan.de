@@ -33,7 +33,7 @@ export const ContentSection = ({content, toc}: ContentSectionProps) => {
   const breakpoint = useBreakpoint()
 
   return (
-    <Section backgroundHeight="full" className="pt-20 lg:pt-28 xl:pt-32 2xl:pt-40">
+    <Section backgroundHeight="full" className="pt-20 pb-16 lg:pb-0 lg:pt-28 xl:pt-32 2xl:pt-40">
       <FadeIn direction="up" delay={breakpoint.lg ? 0.2 : 0} className="order-1 col-span-1 md:col-span-2 lg:order-2 lg:col-span-1">
         <ParagraphHeading text="Inhaltsübersicht" className="border-indigo-300" />
         <ul className="mt-4 mb-8 space-y-2 pr-4">
@@ -49,7 +49,7 @@ export const ContentSection = ({content, toc}: ContentSectionProps) => {
       </FadeIn>
       <FadeIn direction="up" className="order-2 col-span-1 md:col-span-2 lg:order-1 lg:col-span-3">
         <div
-          className="prose px-4 prose-headings:font-black prose-headings:text-slate-900 prose-p:text-slate-500 prose-ul:text-slate-500 md:max-w-2xl 2xl:max-w-3xl"
+          className="prose px-4 prose-headings:font-black prose-headings:text-slate-900 prose-p:text-slate-500 prose-ul:text-slate-500 prose-img:mb-4 prose-img:rounded-xl prose-img:shadow-lg prose-img:shadow-slate-200 md:max-w-2xl 2xl:max-w-3xl"
           dangerouslySetInnerHTML={{__html: content}}
         ></div>
       </FadeIn>

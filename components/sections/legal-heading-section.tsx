@@ -4,7 +4,7 @@ import Link from 'next/link'
 import {Section} from '@components/layout/section'
 import {Card} from '@components/layout/card'
 import {FadeIn} from '@components/functional/fade-in'
-import {Heading} from '@components/typography/heading'
+import {Title} from '@components/typography/title'
 import {ParagraphHeading} from '@components/typography/paragraph-heading'
 import {Paragraph} from '@components/typography/paragraph'
 
@@ -13,8 +13,8 @@ export const LegalHeadingSection = () => {
     <Section backgroundHeight="half" className="lg:pt-16 xl:pt-20">
       <Card background="/images/backgrounds/background-blue-to-green.jpg" className="order-2 col-span-1 md:col-span-2 lg:order-1 lg:col-span-3">
         <div className="-mx-4 mt-24 grid grid-cols-1 gap-y-8 md:grid-cols-2 lg:mt-0 lg:grid-cols-3">
-          <FadeIn direction="up" className="md:col-span-2 lg:col-span-3">
-            <Heading className="max-w-md">Impressum</Heading>
+          <FadeIn direction="up" className="mb-4 md:col-span-2 lg:col-span-3 lg:mb-8">
+            <Title className="max-w-md">Impressum</Title>
           </FadeIn>
           <FadeIn direction="up">
             <ParagraphHeading text="Betreiber der Website" className="border-indigo-300" />
@@ -52,6 +52,7 @@ export const LegalHeadingSection = () => {
       <FadeIn direction="up" className="relative order-1 -mb-32 h-64 lg:order-2 lg:mb-0 lg:mr-4 lg:-ml-8 lg:h-auto xl:-mr-24">
         <Image
           src="/images/scenes/legal.png"
+          alt="Legal Scene"
           placeholder="blur"
           blurDataURL="/images/scenes/legal.png"
           layout="fill"

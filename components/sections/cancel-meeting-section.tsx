@@ -79,6 +79,7 @@ export const CancelMeetingSection = () => {
       <FadeIn direction="up" delay={0.2} className="relative mt-8 mb-16 -mr-8 ml-8 hidden lg:block">
         <Image
           src="/images/scenes/contact.png"
+          alt="Contact Scene"
           placeholder="blur"
           blurDataURL="/images/scenes/contact.png"
           layout="fill"

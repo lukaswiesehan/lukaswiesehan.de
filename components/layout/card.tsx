@@ -10,7 +10,7 @@ type CardProps = {
 export const Card = ({background, children, className}: CardProps) => {
   return (
     <div className={`relative -mx-12 overflow-hidden rounded-3xl px-16 py-12 md:py-16 lg:-mx-16 lg:px-20 lg:py-20 xl:-mx-24 xl:p-28 ${className}`}>
-      <Image src={background} placeholder="blur" blurDataURL={background} layout="fill" objectFit="cover" objectPosition="center" />
+      <Image src={background} alt="Background Image" placeholder="blur" blurDataURL={background} layout="fill" objectFit="cover" objectPosition="center" />
       <div className="absolute top-0 left-0 h-full w-full mix-blend-overlay">
         <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
           <filter id="noiseFilter">

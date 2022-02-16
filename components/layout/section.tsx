@@ -8,11 +8,7 @@ type SectionProps = {
   className: string | null
 }
 
-export const Section = ({
-  backgroundHeight,
-  children,
-  className,
-}: SectionProps) => {
+export const Section = ({backgroundHeight, children, className}: SectionProps) => {
   return (
     <section className="relative overflow-hidden">
       <Background height={backgroundHeight} />

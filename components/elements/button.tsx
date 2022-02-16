@@ -25,7 +25,7 @@ export const Button = ({type, submit, text, action, loading, disabled, hideArrow
 
   return (
     <motion.button
-      className={`h-10 flex-shrink-0 rounded-full font-bold tracking-wide transition-colors duration-150 ease-in-out ${
+      className={`h-10 flex-shrink-0 rounded-full font-bold transition-colors duration-150 ease-in-out ${
         type == 'primary'
           ? `px-5 ${!hideArrow && 'pr-4'} text-slate-50  ${disabled ? 'bg-slate-900/70' : 'bg-slate-900 hover:bg-slate-900/80'}`
           : 'bg-transparent text-slate-900 hover:text-slate-900/70'

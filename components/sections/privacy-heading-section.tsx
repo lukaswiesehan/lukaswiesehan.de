@@ -3,7 +3,7 @@ import Image from 'next/image'
 import {Section} from '@components/layout/section'
 import {Card} from '@components/layout/card'
 import {FadeIn} from '@components/functional/fade-in'
-import {Heading} from '@components/typography/heading'
+import {Title} from '@components/typography/title'
 import {Subheading} from '@components/typography/subheading'
 import {HeadingBody} from '@components/typography/heading-body'
 
@@ -14,7 +14,7 @@ export const PrivacyHeadingSection = () => {
         <div className="mt-24 lg:mt-0 lg:max-w-lg">
           <FadeIn direction="up">
             <Subheading>Deine Privatsphäre im Fokus</Subheading>
-            <Heading className="max-w-md">Datenschutzerklärung</Heading>
+            <Title className="max-w-md">Datenschutzerklärung</Title>
           </FadeIn>
           <FadeIn direction="up">
             <HeadingBody className="mt-8 md:max-w-2xl lg:mt-12">
@@ -27,6 +27,7 @@ export const PrivacyHeadingSection = () => {
       <FadeIn direction="up" className="relative order-1 -mb-32 h-64 lg:order-2 lg:mb-0 lg:mr-4 lg:-ml-8 lg:h-auto xl:-mr-24">
         <Image
           src="/images/scenes/legal.png"
+          alt="Legal Scene"
           placeholder="blur"
           blurDataURL="/images/scenes/legal.png"
           layout="fill"

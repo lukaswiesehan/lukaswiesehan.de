@@ -33,4 +33,12 @@
     hyphens: auto;
     -webkit-hyphens: auto;
   }
+
+  .prose .figure {
+    @apply -mx-4;
+  }
+
+  .prose .figure figcaption {
+    @apply ml-4;
+  }
 }

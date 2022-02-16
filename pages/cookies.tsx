@@ -11,7 +11,7 @@ export const getStaticProps = async () => {
 
 export const Cookies = ({content, toc}) => {
   return (
-    <Container>
+    <Container title="Cookies - Lukas Wiesehan">
       <CookiesHeadingSection />
       <ContentSection content={content} toc={toc} />
     </Container>

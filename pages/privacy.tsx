@@ -11,7 +11,7 @@ export const getStaticProps = async () => {
 
 export const Privacy = ({content, toc}) => {
   return (
-    <Container>
+    <Container title="Datenschutzerklärung - Lukas Wiesehan">
       <PrivacyHeadingSection />
       <ContentSection content={content} toc={toc} />
     </Container>

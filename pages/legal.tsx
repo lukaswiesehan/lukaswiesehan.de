@@ -11,7 +11,7 @@ export const getStaticProps = async () => {
 
 export const Legal = ({content, toc}) => {
   return (
-    <Container>
+    <Container title="Impressum - Lukas Wiesehan">
       <LegalHeadingSection />
       <ContentSection content={content} toc={toc} />
     </Container>

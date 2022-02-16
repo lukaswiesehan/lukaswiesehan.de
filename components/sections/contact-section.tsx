@@ -42,6 +42,7 @@ export const ContactSection = () => {
       <FadeIn direction="up" className="relative order-1 -mb-32 h-64 lg:order-2 lg:mb-0 lg:mr-4 lg:-ml-8 lg:h-auto xl:ml-0 xl:-mr-16 2xl:mr-8 2xl:-ml-8">
         <Image
           src="/images/scenes/contact.png"
+          alt="Contact Scene"
           placeholder="blur"
           blurDataURL="/images/scenes/contact.png"
           layout="fill"

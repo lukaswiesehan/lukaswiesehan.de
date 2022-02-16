@@ -21,21 +21,14 @@ export const HeroSection = () => {
 
   return (
     <Section backgroundHeight="half" className="lg:pt-16 xl:pt-20">
-      <Card
-        background="/images/backgrounds/background-green-to-violet.jpg"
-        className="pb-48 md:col-span-2 md:pb-48 lg:col-span-3 lg:pb-16"
-      >
+      <Card background="/images/backgrounds/background-green-to-violet.jpg" className="pb-48 md:col-span-2 md:pb-48 lg:col-span-3 lg:pb-16">
         <FadeIn direction="up">
-          <Title className="md:max-w-xl lg:max-w-2xl 2xl:max-w-3xl">
-            Next-Level Produktwebsite durch Web-Technologien von morgen.
-          </Title>
+          <Title className="md:max-w-xl lg:max-w-2xl 2xl:max-w-3xl">Next-Level Produktwebsite durch Web-Technologien von morgen.</Title>
         </FadeIn>
         <FadeIn direction="up" delay={0.1}>
           <HeadingBody className="mt-12 md:max-w-2xl lg:mt-16 lg:max-w-xl lg:text-xl xl:max-w-2xl xl:pr-12 2xl:pr-0">
-            Ein Online-Erlebnis, das{' '}
-            <b className="text-slate-900">Dein Produkt</b> ins Rampenlicht
-            stellt. Keine Kompromisse zwischen Design und Funktion dank
-            individueller Konzeption und Entwicklung – auch ohne Agenturbudget.
+            Ein Online-Erlebnis, das <b className="text-slate-900">Dein Produkt</b> ins Rampenlicht stellt. Keine Kompromisse zwischen Design und Funktion
+            dank individueller Konzeption und Entwicklung – auch ohne Agenturbudget.
           </HeadingBody>
           <CTA action={clickCTA} />
         </FadeIn>
@@ -47,6 +40,7 @@ export const HeroSection = () => {
       >
         <Image
           src="/images/scenes/hero.png"
+          alt="Hero Scene"
           placeholder="blur"
           blurDataURL="/images/scenes/hero.png"
           layout="fill"
