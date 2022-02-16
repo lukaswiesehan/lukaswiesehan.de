@@ -11,7 +11,7 @@ export const ContactOptionsSection = () => {
   const breakpoint = useBreakpoint()
 
   return (
-    <Section backgroundHeight="full" className="pt-20 lg:pt-28 xl:pt-32 2xl:pt-40">
+    <Section backgroundHeight="full" className="py-20 lg:py-28 xl:py-32 2xl:py-40">
       <FadeIn direction="up">
         <Icon src="/icons/indigo-send-icon.svg" className="shadow-indigo-100" />
         <ParagraphHeading text="Email" className="border-indigo-300" />
