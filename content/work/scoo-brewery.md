@@ -1,11 +1,12 @@
 ---
 id: 2
-title: 'Scoo Brewery'
+title: 'Scoo Brewery: Produktwebsite für Kombucha'
 date: 'Sommer 2021'
-excerpt: 'Produktwebsite einer Kombucha-Brauerei mit Shopsystem, Händler-Suche und Instagram-Anbindung.'
+excerpt: 'Produktwebsite für die Scoo Brewery aus Stade. Im markentreuen Design werden komplexe Funktionen wie eine Händerkarte, ein Shopsystem und die individuelle Instagram-Einbindung verpackt.'
 background: '/images/backgrounds/background-green-to-violet.jpg'
 cover: '/images/projects/project-thescoo.png'
 url: 'https://thescoo.de/'
+cta: 'Du möchtest wissen, wie Deine eigene Next-Level Produktwebsite aussehen könnte?'
 online: true
 ---
 

@@ -1,11 +1,12 @@
 ---
 id: 1
-title: 'Moin Skydive'
+title: 'Moin Skydive: Produktwebsite für Fallschirmsprünge'
 date: 'Frühjahr 2021'
-excerpt: 'Marketing-Website mit Instagram-Einbindung und Buchungs- und Zahlungssystem für Tandem-Fallschirmsprünge.'
+excerpt: 'Ein aufregendes Design für Moin Skydive zu Vermarktung und Buchung von Tandem-Fallschirmsprüngen mit Einbindung eines individuellen Buchungs- und Zahlungssystems.'
 background: '/images/backgrounds/background-green-to-violet.jpg'
 cover: '/images/projects/project-moinskydive.png'
 url: 'https://moin-skydive.hamburg/'
+cta: 'Du möchtest wissen, wie Deine eigene Next-Level Produktwebsite aussehen könnte?'
 online: true
 ---
 

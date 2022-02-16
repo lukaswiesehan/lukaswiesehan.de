@@ -33,7 +33,7 @@ export const ContentSection = ({content, toc}: ContentSectionProps) => {
   const breakpoint = useBreakpoint()
 
   return (
-    <Section backgroundHeight="full" className="pt-20 pb-16 lg:pb-0 lg:pt-28 xl:pt-32 2xl:pt-40">
+    <Section backgroundHeight="full" className="pt-20 lg:pt-28 xl:pt-32 2xl:pt-40">
       <FadeIn direction="up" delay={breakpoint.lg ? 0.2 : 0} className="order-1 col-span-1 md:col-span-2 lg:order-2 lg:col-span-1">
         <ParagraphHeading text="Inhaltsübersicht" className="border-indigo-300" />
         <ul className="mt-4 mb-8 space-y-2 pr-4">

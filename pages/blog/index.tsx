@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {getBlogPosts} from '@lib/content/blog/get-blog-posts'
 
 import {Container} from '@components/container'

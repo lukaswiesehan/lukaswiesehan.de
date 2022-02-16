@@ -18,7 +18,7 @@ export const ProjectsSection = ({projects}) => {
     <Section backgroundHeight="full" className="pt-20 pb-16 lg:pb-0 lg:pt-28 xl:pt-32 2xl:pt-40">
       {projects.map(({title, excerpt, slug, date, cover}, index) => (
         <div key={index} className="lg:col-span-2">
-          <FadeIn direction="up" delay={breakpoint.md ? (index % 2 != 0 ? 0.2 : 0) : 0}>
+          <FadeIn direction="up" delay={breakpoint.md ? (index % 2 != 0 ? 0.2 : 0) : 0} className="max-w-md 2xl:max-w-lg">
             <Link href={`/work/${slug}`}>
               <a className="block">
                 <div className="relative mx-4 mb-12 mt-8 h-48 md:mt-0">

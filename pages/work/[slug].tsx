@@ -4,6 +4,7 @@ import {parseMarkdown} from '@lib/content/parse-markdown'
 import {Container} from '@components/container'
 import {ProjectHeadingSection} from '@components/sections/project-heading-section'
 import {ContentSection} from '@components/sections/content-section'
+import {CTASection} from '@components/sections/cta-section'
 
 export const getStaticPaths = async () => {
   const paths = getProjectPaths()
@@ -24,6 +25,7 @@ export const Project = ({content, toc, meta}) => {
     <Container title={`${meta.title} - Lukas Wiesehan`} description={meta.excerpt}>
       <ProjectHeadingSection meta={meta} />
       <ContentSection content={content} toc={toc} />
+      <CTASection text={meta.cta} />
     </Container>
   )
 }

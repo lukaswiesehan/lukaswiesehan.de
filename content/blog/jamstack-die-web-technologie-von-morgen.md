@@ -14,6 +14,7 @@ date: '16. Februar 2022'
 excerpt: 'Vor zwei Jahren habe ich angefangen, mich auf einen Trend in der Webentwicklung zu stürzen, der verspricht, Websites und Web-Apps schneller, sicherer, günstiger und besser skalierbar zu machen. Was dieser sogenannte JamStack ist, wie er entstanden ist, und warum er genau das Richtige für Deine Produktwebsite ist, schauen wir uns nachfolgend an.'
 tags: ['JamStack', 'Headless eCommerce', 'Serverless', 'Microservices', 'Produktkonfigurator', 'Händlerkarte']
 background: '/images/backgrounds/background-orange-to-blue.jpg'
+cta: 'Du möchtest mehr über die Möglichkeiten zur Umsetzung Deiner Produktwebsite erfahren?'
 online: true
 ---
 
