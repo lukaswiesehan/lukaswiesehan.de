@@ -43,16 +43,15 @@ export const ProcessSection = () => {
         <ParagraphHeading text="1 - Analyse" className="border-indigo-300" />
         <Paragraph>
           Wir sprechen über Dein Produkt, Dein Unternehmen und dessen <b className="text-slate-900">Werte & Ziele</b>. So legen wir gemeinsam den
-          Funktions-umfang des Endprodukts und die Ansprü-che an das Design der Website fest.
+          Funktionsumfang des Endprodukts und die Ansprüche an das Design der Website fest.
         </Paragraph>
       </FadeIn>
       <FadeIn direction="up" className="order-4 lg:-mt-28 2xl:-mt-32">
         <Icon src="/icons/indigo-architecture-icon.svg" className="shadow-indigo-100" />
         <ParagraphHeading text="2 - Konzeption" className="border-indigo-300" />
         <Paragraph>
-          Auf Basis der Analyse stelle ich ein Ge-samtsystem aus <b className="text-slate-900">modernen Tools</b>
-          zusam-men. So erhalten wir auch bei komplexen Anforderungen eine perfekte Nutzerer-fahrung für Deine Kunden und ein kin-derleicht bedienbares
-          System für Dich.
+          Auf Basis der Analyse stelle ich ein Gesamtsystem aus <b className="text-slate-900">modernen Tools</b> zusammen. So erhalten wir auch bei
+          komplexen Anforderungen eine perfekte Nutzererfahrung für Deine Kunden und ein kinderleicht bedienbares System für Dich.
         </Paragraph>
       </FadeIn>
       <FadeIn direction="up" className="order-5 lg:-mt-12 2xl:-mt-16">
