@@ -51,7 +51,7 @@ export const ContactOptionsSection = () => {
           <Button
             type="secondary"
             text="Zu Instagram"
-            action={() => window.open('https://www.instagram.com/lukaswiesehan.de/', '_ blank')}
+            action={() => window.open('https://www.instagram.com/lukaswiesehan/', '_ blank')}
             loading={false}
           />
         </div>
