@@ -63,9 +63,17 @@ export const TestimonialsSection = ({testimonials}: TestimonialSectionProps) => 
         <div className="relative -ml-0.5 overflow-x-hidden pl-0.5" style={{height}}>
           <AnimatePresence initial={false} custom={direction}>
             {testimonials.map(
-              ({headline, body}, index) =>
+              ({headline, body, article}, index) =>
                 selectedTab == index && (
-                  <Testimonial key={index} index={index} headline={headline} body={body} transitionDirection={direction} setHeight={setHeight} />
+                  <Testimonial
+                    key={index}
+                    index={index}
+                    headline={headline}
+                    body={body}
+                    article={article}
+                    transitionDirection={direction}
+                    setHeight={setHeight}
+                  />
                 )
             )}
           </AnimatePresence>
