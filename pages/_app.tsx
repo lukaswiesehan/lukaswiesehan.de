@@ -8,7 +8,7 @@ const MyApp = ({Component, pageProps}) => {
 
   useEffect(() => {
     loadFathom('ZAURHCOV', {
-      includedDomains: ['preview.lukaswiesehan.de', 'lukaswiesehan.de'],
+      includedDomains: ['lukaswiesehan.de', 'www.lukaswiesehan.de']
     })
     const onRouteChangeComplete = () => {
       trackPageview()
