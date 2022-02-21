@@ -12,7 +12,7 @@ export const Footer = () => {
       <div className="bg-slate-100 text-sm">
         <div className="mx-auto grid w-full max-w-screen-lg grid-cols-1 gap-y-8 py-12 px-4 md:grid-cols-2 md:py-16 lg:grid-cols-4 lg:py-20 lg:px-0 xl:py-28 2xl:max-w-screen-xl">
           <div className="px-4 lg:flex lg:flex-col lg:justify-between">
-            <Logo />
+            <Logo className="text-slate-400 hover:text-slate-500" />
             <p>&copy; Lukas Wiesehan {currentYear}</p>
           </div>
           <div className="hidden lg:block" />

@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
-export const Logo = () => {
+export const Logo = ({className}) => {
   return (
     <Link href="/">
-      <a className="group relative block overflow-visible p-2 text-slate-900 hover:text-slate-700">
+      <a className={`group relative block overflow-visible ${className}`}>
         <svg className="relative h-6 fill-current sm:h-8" viewBox="0 0 363 212" xmlns="http://www.w3.org/2000/svg">
           <path d="M41.821 19.5394C44.1779 8.74814 55.0428 0 66.0885 0H110.088L77.656 148.5H161.656L148 211.026H0.000244141L41.821 19.5394Z" />
           <path d="M209.821 19.5394H273.821L236.268 191.486C233.911 202.278 223.046 211.026 212 211.026H168L209.821 19.5394Z" />
