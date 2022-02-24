@@ -19,7 +19,7 @@ export const LegalHeadingSection = () => {
           <FadeIn direction="up">
             <ParagraphHeading text="Betreiber der Website" className="border-indigo-300" />
             <Paragraph>
-              <span className="block text-slate-900">
+              <span className="block">
                 <b>Lukas Wiesehan</b>
                 <br />
                 Design & Development
@@ -37,13 +37,13 @@ export const LegalHeadingSection = () => {
             </Paragraph>
           </FadeIn>
           <FadeIn direction="up">
-            <ParagraphHeading text="Angaben zum Unternehmen" className="border-indigo-300" />
+            <ParagraphHeading text="Steuerliche Angaben" className="border-indigo-300" />
             <Paragraph>
               <span className="block">
-                <b>Steuernummer:</b> 43/148/05020
+                <b>Steuernr.:</b> 43/148/05020
               </span>
               <span className="mt-2 block">
-                <b>Umsatzsteuer-ID:</b> DE341117007
+                <b>USt.-ID:</b> DE341117007
               </span>
             </Paragraph>
           </FadeIn>
