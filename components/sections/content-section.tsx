@@ -12,9 +12,8 @@ type ScrollToProps = {
 
 const ScrollTo = ({id, children}: ScrollToProps) => {
   const scroll = () => {
-    const element = document.getElementById(id)
-    const position = element.getBoundingClientRect()
-    window.scrollTo({top: position.top - 100, behavior: 'smooth'})
+    const pos = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset
+    window.scrollTo({top: pos - 100, behavior: 'smooth'})
   }
 
   return (
