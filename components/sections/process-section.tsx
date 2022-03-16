@@ -58,7 +58,7 @@ export const ProcessSection = () => {
         <Icon src="/icons/indigo-colors-icon.svg" className="shadow-indigo-100" />
         <ParagraphHeading text="3 - Design" className="border-indigo-300" />
         <Paragraph>
-          Lösgelöst von Baukästen oder Content Management Systemen erarbeiten wir gemeinsam ein Design, das{' '}
+          Losgelöst von Baukästen oder Content Management Systemen erarbeiten wir gemeinsam ein Design, das{' '}
           <b className="text-slate-900">Dein Produkt ins Rampenlicht</b> stellt. Natürlich modern und für Mobilgeräte optimiert.
         </Paragraph>
       </FadeIn>
