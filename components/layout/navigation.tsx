@@ -38,7 +38,7 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed z-40 w-full bg-white/70 backdrop-blur-lg backdrop-filter">
-      <div className="mx-auto flex h-16 w-full max-w-screen-lg items-center justify-between border-x-2 border-transparent px-8 md:h-20 xl:px-4 2xl:max-w-screen-xl">
+      <div className="mx-auto flex h-16 w-full max-w-screen-lg items-center justify-between border-x-2 border-transparent px-8 md:h-20 lg:px-4 2xl:max-w-screen-xl">
         <div className="relative z-50">
           <Logo className="text-slate-900 hover:text-slate-700" />
         </div>
