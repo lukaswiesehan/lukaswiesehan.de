@@ -27,8 +27,8 @@ export const getSlots = async (): Promise<Slot[]> => {
   const slots = response.data.items
     .filter((e) => e.summary == 'Meeting-Slot')
     .map((e) => {
-      const start = new Date(e.start.dateTime)
-      const end = new Date(e.end.dateTime)
+      const start = new Date(e.start.dateTime.split('+')[0])
+      const end = new Date(e.end.dateTime.split('+')[0])
       return {
         id: e.id,
         timezone: e.start.timeZone,
