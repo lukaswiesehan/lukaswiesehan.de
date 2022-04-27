@@ -1,5 +1,6 @@
 import {Background} from '@components/layout/background'
 import {Logo} from '@components/elements/logo'
+import {SolidLeafIcon} from '@components/elements/icons/solid-leaf-icon'
 import {FooterHeading} from '@components/elements/footer-heading'
 import {FooterLink} from '@components/elements/footer-link'
 
@@ -13,7 +14,16 @@ export const Footer = () => {
         <div className="mx-auto grid w-full max-w-screen-lg grid-cols-1 gap-y-8 py-12 px-4 md:grid-cols-2 md:py-16 lg:grid-cols-4 lg:py-20 lg:px-0 xl:py-28 2xl:max-w-screen-xl">
           <div className="space-y-4 px-4 lg:flex lg:flex-col lg:justify-between">
             <Logo className="text-slate-400 hover:text-slate-500" />
-            <p>&copy; Lukas Wiesehan {currentYear}</p>
+            <div className="space-y-1">
+              <p>&copy; Lukas Wiesehan {currentYear}</p>
+              <p>
+                <span>Diese Website ist </span>
+                <span className="inline-flex items-center space-x-0.5 font-bold text-emerald-500">
+                  <span>klima-positiv</span>
+                  <SolidLeafIcon />
+                </span>
+              </p>
+            </div>
           </div>
           <div className="hidden lg:block" />
           <div className="px-4">
