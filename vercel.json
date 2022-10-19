@@ -12,5 +12,27 @@
       "source": "/fonts/lato-900.woff2",
       "headers": [{"key": "Cache-Control", "value": "public, max-age=31536000, immutable"}]
     }
+  ],
+  "redirects": [
+    { 
+      "source": "/linkedin",
+      "destination": "https://www.linkedin.com/in/lukaswiesehan/", 
+      "permanent": true
+    },
+    { 
+      "source": "/instagram",
+      "destination": "https://www.instagram.com/lukaswiesehan/", 
+      "permanent": true
+    },
+    { 
+      "source": "/facebook",
+      "destination": "https://www.facebook.com/lukas.wiesehan/", 
+      "permanent": true
+    },
+    { 
+      "source": "/twitter",
+      "destination": "https://twitter.com/lukaswiesehan", 
+      "permanent": true
+    }
   ]
 }
