@@ -1,12 +1,12 @@
 import {JWT} from 'google-auth-library'
 
-export const updateEvent = async ({event, details, meeting}) => {
+export const createEvent = async ({event, details, meeting}) => {
   const client = new JWT({
     email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
     key: process.env.GOOGLE_SERVICE_ACCOUNT_KEY.replace(/\\n/g, '\n'),
     scopes: ['https://www.googleapis.com/auth/calendar']
   })
-  const endpoint = `https://www.googleapis.com/calendar/v3/calendars/${process.env.GOOGLE_SLOTS_CALENDAR_ID}/events`
+  const endpoint = `https://www.googleapis.com/calendar/v3/calendars/${process.env.GOOGLE_MAIN_CALENDAR_ID}/events`
 
   let location = ''
   let description = ''
@@ -24,8 +24,8 @@ export const updateEvent = async ({event, details, meeting}) => {
   }
 
   const response = await client.request({
-    url: `${endpoint}/${event.id}`,
-    method: 'PUT',
+    url: endpoint,
+    method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
       start: event.start,

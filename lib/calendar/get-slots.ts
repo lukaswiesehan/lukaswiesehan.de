@@ -8,7 +8,7 @@ export const getSlots = async (): Promise<Slot[]> => {
     key: process.env.GOOGLE_SERVICE_ACCOUNT_KEY.replace(/\\n/g, '\n'),
     scopes: ['https://www.googleapis.com/auth/calendar']
   })
-  const endpoint = 'https://www.googleapis.com/calendar/v3/calendars/mail@lukaswiesehan.de/events'
+  const endpoint = `https://www.googleapis.com/calendar/v3/calendars/${process.env.GOOGLE_SLOTS_CALENDAR_ID}/events`
 
   let tomorrow = new Date()
   tomorrow.setDate(tomorrow.getDate() + 1)
